@@ -1,8 +1,10 @@
 const express = require("express");
-const { registerClinician } = require("./../controller/user.controller");
+const { registerClinician, registerPatient, loginPatient } = require("./../controller/user.controller");
 
-router  = express.Router();
+const router  = express.Router();
 
-router.post('/register',registerClinician);
+router.post('/registerclinician',registerClinician);
+router.post('/registerpatient',registerPatient);
+router.post('/loginpatient',loginPatient);
 
 module.exports = router;

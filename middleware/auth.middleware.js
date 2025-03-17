@@ -7,7 +7,7 @@ const verifyJWT = asynchandler(async(req,_,next)=>{
 
     try{
         const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "")
-        // console.log("Middleware checkpoint: ",token);
+        console.log("Middleware checkpoint: ",token);
         if(!token){
             throw new APIError(401,"Unauthorized Access");
         }

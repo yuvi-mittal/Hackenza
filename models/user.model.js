@@ -45,7 +45,7 @@ ClinicianSchema.pre("save", async function(next){
     return next();
   })
 ClinicianSchema.method('isPasswordCorrect', async function(password){
-    // console.log(password);
+    console.log(password);
     return await bcrypt.compare(password,this.password);
   })
 ClinicianSchema.method('generateAccessToken', function(){
